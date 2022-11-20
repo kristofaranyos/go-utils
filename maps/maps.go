@@ -19,3 +19,9 @@ func ContainsKey[K comparable, V comparable](m map[K]V, k K) bool {
 
 	return false
 }
+
+func Clear[K comparable, V comparable](m map[K]V) {
+	for k, _ := range m {
+		delete(m, k)
+	}
+}

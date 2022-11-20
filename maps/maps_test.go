@@ -39,3 +39,15 @@ func TestContainsKey(t *testing.T) {
 		assert.Equal(t, false, maps.ContainsKey(m, "Belgium"))
 	})
 }
+
+func TestClear(t *testing.T) {
+	m := map[string]string{
+		"England": "London",
+		"Germany": "Berlin",
+		"France":  "Paris",
+	}
+
+	maps.Clear(m)
+
+	assert.Len(t, m, 0)
+}
