@@ -3,8 +3,7 @@ package maps_test
 import (
 	"testing"
 
-	"go-utils/maps"
-
+	"github.com/kristofaranyos/go-utils/maps"
 	"github.com/stretchr/testify/assert"
 )
 
