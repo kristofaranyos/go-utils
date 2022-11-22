@@ -20,4 +20,16 @@ func Map[T comparable](s []T, f func(t T) T) []T {
 	return res
 }
 
+func Filter[T comparable](s []T, f func(t T) bool) []T {
+	var res []T
+
+	for _, e := range s {
+		if f(e) {
+			res = append(res, e)
+		}
+	}
+
+	return res
+}
+
 // TODO: add tests
