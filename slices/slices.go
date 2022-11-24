@@ -32,4 +32,14 @@ func Filter[T comparable](s []T, f func(t T) bool) []T {
 	return res
 }
 
+func Cast[S any, T any](s []S, f func(s S) T) []T {
+	result := make([]T, len(s))
+
+	for i, e := range s {
+		result[i] = f(e)
+	}
+
+	return result
+}
+
 // TODO: add tests
